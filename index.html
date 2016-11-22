@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>rainbow</title>
+</head>
+
+<body>
+    <script>
+    var generatePara = function generatePara() {
+        for (var i = 0; i <= 840; i++) {
+            var para = document.createElement('P');
+            para.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            document.body.appendChild(para);
+
+        };
+    }
+    var paraColor = document.getElementsByTagName('p');
+
+
+
+    generatePara();
+    for (var i = 0; i < paraColor.length; i++) {
+
+        switch (i % 7) {
+            case 0:
+                paraColor[i].style.background = "violet";
+                break;
+            case 1:
+                paraColor[i].style.background = "indigo";
+                break;
+            case 2:
+                paraColor[i].style.background = "blue";
+                break;
+            case 3:
+                paraColor[i].style.background = "green";
+                break;
+            case 4:
+                paraColor[i].style.background = "yellow";
+                break;
+            case 5:
+                paraColor[i].style.background = "red";
+                break;
+            default:
+                paraColor[i].style.background = "orange";
+        }
+    }
+    </script>
+</body>
+
+</html>
